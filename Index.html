@@ -1,3 +1,184 @@
+
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#111827">
+<title>My First Website</title>
+
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  color: white;
+  background: linear-gradient(135deg, #111827, #312e81, #7e22ce);
+  background-size: 300% 300%;
+  animation: gradient 10s ease infinite;
+}
+
+@keyframes gradient {
+  0% {background-position: 0% 50%;}
+  50% {background-position: 100% 50%;}
+  100% {background-position: 0% 50%;}
+}
+
+.container {
+  width: 100%;
+  max-width: 480px;
+  padding: 35px 25px;
+  text-align: center;
+  background: rgba(255,255,255,0.12);
+  border: 1px solid rgba(255,255,255,0.25);
+  border-radius: 25px;
+  backdrop-filter: blur(12px);
+  box-shadow: 0 15px 45px rgba(0,0,0,0.3);
+  animation: appear 1s ease;
+}
+
+@keyframes appear {
+  from {
+    opacity: 0;
+    transform: translateY(35px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.logo {
+  font-size: 55px;
+  margin-bottom: 15px;
+}
+
+h1 {
+  font-size: 32px;
+  margin-bottom: 12px;
+  color: #fef08a;
+}
+
+p {
+  font-size: 16px;
+  line-height: 1.7;
+  color: #f3f4f6;
+}
+
+.clock {
+  font-size: 25px;
+  font-weight: bold;
+  margin-top: 22px;
+  color: #fde68a;
+}
+
+.date {
+  margin-top: 5px;
+  font-size: 14px;
+}
+
+button {
+  margin-top: 28px;
+  padding: 14px 30px;
+  border: none;
+  border-radius: 50px;
+  background: #facc15;
+  color: #111827;
+  font-size: 17px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  transform: scale(1.07);
+  background: white;
+}
+
+#message {
+  margin-top: 20px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #fef08a;
+  min-height: 28px;
+}
+
+footer {
+  margin-top: 30px;
+  color: #ddd6fe;
+  font-size: 12px;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+  <div class="logo">🌟</div>
+
+  <h1>नमस्ते! 🙏</h1>
+
+  <p>
+    मेरी पहली वेबसाइट में आपका स्वागत है।<br>
+    यह वेबसाइट GitHub Pages की मदद से बनाई गई है।
+  </p>
+
+  <div class="clock" id="clock">00:00:00</div>
+
+  <div class="date" id="date">तारीख लोड हो रही है...</div>
+
+  <button onclick="showMessage()">
+    यहां क्लिक करें ❤️
+  </button>
+
+  <div id="message"></div>
+
+  <footer>
+    © 2026 My First Website | Made with ❤️
+  </footer>
+
+</div>
+
+<script>
+
+function updateClock() {
+  const now = new Date();
+
+  document.getElementById("clock").innerText =
+    now.toLocaleTimeString("en-IN");
+
+  document.getElementById("date").innerText =
+    now.toLocaleDateString("hi-IN", {
+      weekday: "long",
+      year: "numeric",
+      month: "long",
+      day: "numeric"
+    });
+}
+
+function showMessage() {
+  document.getElementById("message").innerText =
+    "आपका स्वागत है! 🎉 वेबसाइट सफलतापूर्वक काम कर रही है।";
+}
+
+updateClock();
+setInterval(updateClock, 1000);
+
+</script>
+
+</body>
+</html>
 <!DOCTYPE html>
 <html lang="hi">
 <head>
