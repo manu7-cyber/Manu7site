@@ -17,7 +17,7 @@ This folder is intended to be uploaded as `arkvisuals/` inside the existing GitH
 5. Open: https://manu7-cyber.github.io/Manu7site/arkvisuals/
 
 ## Before publishing
-- Put your original logo image at `assets/logo/ark-logo.png` (PNG recommended).
+- The original ARK logo is already included at `assets/logo/ark-logo.jpg`.
 - Add only genuine project images/videos to `assets/portfolio/` and then we can build the portfolio gallery.
 - The wedding signature section currently uses a remote Unsplash decorative image. Replace it with your own licensed photo if preferred.
 - The enquiry form opens WhatsApp to +91 90792 81110; it does not store submissions.
